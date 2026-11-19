@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FuTv TV - Gelişmiş Android TV Medya Oynatıcı ve Destek Portalı</title>
+    <title>FuTv TV - Gelişmiş Android TV Medya Oynatıcı, Rehberler ve Destek Portalı</title>
     <meta
       name="description"
-      content="FuTv TV Android ve Android TV uygulaması için resmi bilgi portalı, özellikler, kurulum rehberi ve canlı destek altyapısı."
+      content="FuTv TV Android ve Android TV medya oynatıcı için teknik rehberler, kurulum adımları, performans optimizasyonu, sıkça sorulan sorular ve destek portalı."
     />
     <!-- Google AdSense Doğrulama Etiketi -->
     <meta name="google-adsense-account" content="ca-pub-9070407797966766">
@@ -33,7 +33,7 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         background: var(--bg);
         color: var(--text);
-        line-height: 1.6;
+        line-height: 1.65;
         background-image: 
           radial-gradient(circle at 50% 15%, rgba(239, 68, 68, 0.22) 0%, transparent 45%),
           radial-gradient(circle at 80% 70%, rgba(185, 28, 28, 0.15) 0%, transparent 40%),
@@ -53,6 +53,8 @@
         position: sticky;
         top: 0;
         z-index: 1000;
+        gap: 16px;
+        flex-wrap: wrap;
       }
 
       .nav-brand {
@@ -70,11 +72,12 @@
 
       .nav-links {
         display: flex;
-        gap: 24px;
-        font-size: 0.9rem;
+        gap: 20px;
+        font-size: 0.88rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.5px;
+        flex-wrap: wrap;
       }
 
       .nav-links a {
@@ -141,9 +144,9 @@
       }
 
       .hero p {
-        font-size: 1.15rem;
+        font-size: 1.12rem;
         color: var(--muted);
-        max-width: 650px;
+        max-width: 720px;
         margin: 0 auto 32px;
       }
 
@@ -201,9 +204,9 @@
 
       .section-title {
         text-align: center;
-        font-size: 2.2rem;
+        font-size: 2.1rem;
         font-weight: 900;
-        margin: 50px 0 30px;
+        margin: 56px 0 28px;
         letter-spacing: 1.5px;
         text-transform: uppercase;
         color: #fff;
@@ -257,8 +260,51 @@
 
       .feature-card p {
         margin: 0;
-        font-size: 0.9rem;
+        font-size: 0.92rem;
         color: var(--muted);
+      }
+
+      /* Rehber ve Teknik Makale Kartları */
+      .guides-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 24px;
+        margin-top: 24px;
+      }
+
+      .guide-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 18px;
+        padding: 26px;
+        backdrop-filter: blur(10px);
+      }
+
+      .guide-card h3 {
+        margin: 0 0 12px;
+        font-size: 1.2rem;
+        color: #fff;
+      }
+
+      .guide-card p {
+        margin: 0 0 12px;
+        font-size: 0.94rem;
+        color: var(--muted);
+      }
+
+      .guide-card p:last-child {
+        margin-bottom: 0;
+      }
+
+      .guide-list {
+        margin: 10px 0 0;
+        padding-left: 20px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .guide-list li {
+        margin-bottom: 8px;
       }
 
       /* Kurulum ve SSS Bölümü */
@@ -266,7 +312,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 30px;
-        margin-top: 50px;
+        margin-top: 54px;
       }
 
       .col-header {
@@ -369,7 +415,7 @@
 
       .faq-answer {
         margin-top: 10px;
-        font-size: 0.9rem;
+        font-size: 0.92rem;
         color: var(--muted);
         border-top: 1px solid var(--line);
         padding-top: 10px;
@@ -386,13 +432,18 @@
 
       .info-card h3 {
         color: var(--primary);
-        font-size: 1.3rem;
+        font-size: 1.35rem;
         margin-top: 0;
       }
 
       .info-card p {
         color: var(--muted);
         font-size: 0.95rem;
+        margin-bottom: 14px;
+      }
+
+      .info-card p:last-child {
+        margin-bottom: 0;
       }
 
       .store-link-btn {
@@ -451,11 +502,12 @@
       </a>
       <div class="nav-links">
         <a href="#ozellikler">Özellikler</a>
+        <a href="#rehberler">Rehberler</a>
         <a href="#kurulum">Kurulum</a>
         <a href="#sss">SSS</a>
         <a href="#destek">Destek</a>
       </div>
-      <a href="https://play.google.com/store/apps/details?id=com.futv.pro&hl=tr" target="_blank" class="btn-header">ŞİMDİ İNDİR</a>
+      <a href="https://play.google.com/store/apps/details?id=com.futv.pro&hl=tr" target="_blank" rel="noopener noreferrer" class="btn-header">ŞİMDİ İNDİR</a>
     </nav>
 
     <!-- Hero / Ana Karşılama -->
@@ -464,11 +516,11 @@
         <img src="https://play-lh.googleusercontent.com/Lm3sS4Bza3iafZpk_7QsjE4k4GyaRBjNonHodHpZtEhI9D3YUdsqAc9-fVb1aMBt7ks_fy9z9LpRx5XSp5iMeg=w480-h960-rw" alt="FuTv Logo" class="hero-logo">
       </div>
       <h1>GELİŞMİŞ ANDROID TV OYNATICI</h1>
-      <p>Tüm Android telefonlar ve Android TV cihazlarınız için modern, akıcı ve yüksek performanslı medya akış platformu.</p>
+      <p>Tüm Android telefonlar, tabletler ve Android TV cihazları için modern, akıcı ve yüksek performanslı medya oynatıcı altyapısı; kurulum rehberleri, kumanda kullanım ipuçları ve teknik destek kaynakları.</p>
       
       <div class="hero-buttons">
-        <a href="https://play.google.com/store/apps/details?id=com.futv.pro&hl=tr" target="_blank" class="btn-primary">HEMEN İNDİR</a>
-        <a href="#kurulum" class="btn-secondary">KURULUM REHBERİ</a>
+        <a href="https://play.google.com/store/apps/details?id=com.futv.pro&hl=tr" target="_blank" rel="noopener noreferrer" class="btn-primary">HEMEN İNDİR</a>
+        <a href="#rehberler" class="btn-secondary">TEKNİK REHBERLER</a>
       </div>
     </section>
 
@@ -479,26 +531,66 @@
         <div class="feature-card">
           <div class="feature-icon-box">🎮</div>
           <h3>D-PAD KUMANDA UYUMLU</h3>
-          <p>Android TV kumandalarının yön tuşlarıyla %100 entegre, takılmasız gezinti deneyimi.</p>
+          <p>Android TV kumandalarının yön tuşlarıyla %100 entegre, takılmasız gezinti ve odaklanma deneyimi.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon-box">▶</div>
           <h3>YÜKSEK PERFORMANS</h3>
-          <p>Modern medya akış protokollerini destekleyen kesintisiz video oynatıcı altyapısı.</p>
+          <p>Modern medya akış protokollerini destekleyen, düşük gecikmeli ve kararlı video oynatıcı altyapısı.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon-box">🪶</div>
           <h3>HAFİF MİMARİ</h3>
-          <p>Cihaz hafızasını ve RAM'i yormayan, donma yapmayan hafif sistem tasarımı.</p>
+          <p>Düşük bellekli TV Box ve akıllı telefonlarda bile sistem kaynaklarını yormayan optimize yapı.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon-box">🌙</div>
           <h3>MODERN DARK MODE</h3>
-          <p>Göz yormayan, şık neon detaylara sahip dark-mode arayüz çizgileri.</p>
+          <p>Karanlık oturma odası ve gece kullanımları için göz yormayan koyu arayüz ve net kontrast düzeni.</p>
         </div>
+      </div>
+
+      <!-- Teknik Rehberler ve Kullanım Notları -->
+      <h2 id="rehberler" class="section-title">KULLANIM VE OPTİMİZASYON REHBERLERİ</h2>
+      <div class="guides-grid">
+        <article class="guide-card">
+          <h3>Android TV Kumanda (D-Pad) Gezinme Rehberi</h3>
+          <p>
+            Büyük ekran televizyonlarda dokunmatik ekran yerine fiziksel veya sanal uzaktan kumanda kullanıldığı için arayüz odak yönetimi kritik önem taşır. FuTv TV, yukarı, aşağı, sağ, sol ve seçme (OK/Enter) tuşlarıyla öngörülebilir bir odak sırası sunacak şekilde tasarlanmıştır.
+          </p>
+          <ul class="guide-list">
+            <li>Menü öğeleri arasında geçiş yaparken aktif kart sınırları görsel olarak vurgulanır.</li>
+            <li>Oynatma sırasında kumanda yön tuşlarıyla kontrol çubuğuna hızlı erişim sağlanır.</li>
+            <li>Geri tuşuyla menü katmanları arasında takılmadan üst seviyeye dönülebilir.</li>
+          </ul>
+        </article>
+
+        <article class="guide-card">
+          <h3>Akıcı Yayın ve Ağ Performansı İpuçları</h3>
+          <p>
+            Yüksek çözünürlüklü medya akışlarında donma ve arabelleğe alma (buffering) sorunlarını en aza indirmek için hem ağ bağlantısının hem de cihaz donanım ayarlarının dengeli olması gerekir.
+          </p>
+          <ul class="guide-list">
+            <li>Mümkünse Android TV veya TV Box cihazını 5 GHz Wi-Fi bandına veya Ethernet bağlantısına bağlayın.</li>
+            <li>Arka planda yoğun bant genişliği veya bellek tüketen uygulamaları kapalı tutun.</li>
+            <li>Ağ dalgalanması yaşandığında bağlantıyı kontrol edip oynatıcıyı yeniden başlatın.</li>
+          </ul>
+        </article>
+
+        <article class="guide-card">
+          <h3>Donanım İvmesi ve Cihaz Kaynak Yönetimi</h3>
+          <p>
+            Farklı nesil Android telefonlar, tabletler ve TV Box modelleri farklı işlemci ve grafik birimlerine (GPU) sahiptir. Hafif mimari yaklaşımı sayesinde gereksiz arka plan servisleri sınırlandırılır.
+          </p>
+          <ul class="guide-list">
+            <li>Uzun süreli izleme seanslarında cihazın aşırı ısınmasını önlemek için havalandırmasına dikkat edin.</li>
+            <li>Sistem güncellemelerini ve Google Play uygulama sürümlerini güncel tutarak uyumluluğu koruyun.</li>
+            <li>Önbellek sorunlarında uygulama ayarlarından yalnızca önbelleği temizlemeyi deneyin.</li>
+          </ul>
+        </article>
       </div>
 
       <!-- Kurulum Adımları & SSS -->
@@ -507,7 +599,7 @@
         <div id="kurulum">
           <div class="col-header">KURULUM</div>
           <div class="install-steps-wrapper">
-            <a href="https://play.google.com/store/apps/details?id=com.futv.pro&hl=tr" target="_blank" class="step-card">
+            <a href="https://play.google.com/store/apps/details?id=com.futv.pro&hl=tr" target="_blank" rel="noopener noreferrer" class="step-card">
               <span class="step-icon">📥</span>
               <div class="step-title">1. İndir</div>
             </a>
@@ -519,11 +611,11 @@
             <span class="step-arrow">➔</span>
             <div class="step-card">
               <span class="step-icon">🍿</span>
-              <div class="step-title">3. İzle</div>
+              <div class="step-title">3. Kullan</div>
             </div>
           </div>
-          <p style="margin-top: 20px; font-size: 0.9rem; color: var(--muted);">
-            Resmi Google Play Store üzerinden uygulamamızı güvenle indirmek için <a href="https://play.google.com/store/apps/details?id=com.futv.pro&hl=tr" target="_blank" class="store-link-btn">Google Play Bağlantısına Tıklayın</a>.
+          <p style="margin-top: 20px; font-size: 0.92rem; color: var(--muted);">
+            Uygulamayı güvenli ve doğrulanmış sürümüyle yüklemek için resmi Google Play sayfasını ziyaret edebilirsiniz: <a href="https://play.google.com/store/apps/details?id=com.futv.pro&hl=tr" target="_blank" rel="noopener noreferrer" class="store-link-btn">Google Play Bağlantısına Tıklayın</a>. Kurulum tamamlandıktan sonra uygulama simgesini telefon veya Android TV ana ekranından açabilirsiniz.
           </p>
         </div>
 
@@ -533,17 +625,22 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary class="faq-question">Hangi cihazlar destekleniyor?</summary>
-              <div class="faq-answer">FuTv TV, Android işletim sistemli akıllı telefonlar, tabletler ve tüm Android TV / TV Box cihazlarıyla tam uyumludur.</div>
+              <div class="faq-answer">FuTv TV, uyumlu Android sürümüne sahip akıllı telefonlar, tabletler ve Android TV / TV Box cihazlarıyla çalışacak şekilde geliştirilmiştir.</div>
             </details>
 
             <details class="faq-item">
               <summary class="faq-question">Uygulama ücretsiz mi?</summary>
-              <div class="faq-answer">Evet, FuTv TV tamamen ücretsizdir. Altyapı maliyetlerini karşılamak adına güvenli reklam ağlarını (Google AdMob vb.) barındırır.</div>
+              <div class="faq-answer">Evet, FuTv TV ücretsiz olarak sunulur. Geliştirme ve altyapı sürdürülebilirliğini desteklemek amacıyla reklam ağlarından yararlanılabilir.</div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Görüntü takılması yaşanırsa ne yapmalıyım?</summary>
+              <div class="faq-answer">Öncelikle internet bağlantı hızınızı ve modem/yönlendirici sinyal kalitesini kontrol edin; ardından uygulamayı kapatıp yeniden açın veya cihazınızı yeniden başlatın.</div>
             </details>
 
             <details class="faq-item">
               <summary class="faq-question">Teknik destek talebini nasıl iletebilirim?</summary>
-              <div class="faq-answer">Yaşadığınız teknik aksaklıkları veya önerilerinizi ugur2941@gmail.com adresi üzerinden doğrudan bize iletebilirsiniz.</div>
+              <div class="faq-answer">Karşılaştığınız teknik sorunları, cihaz modelinizi ve yaşadığınız adımı belirterek ugur2941@gmail.com adresi üzerinden destek ekibine yazabilirsiniz.</div>
             </details>
           </div>
         </div>
@@ -553,7 +650,10 @@
       <div class="info-card">
         <h3>FuTv TV Hakkında Kurumsal Bilgi Bankası</h3>
         <p>
-          <strong>FuTv TV</strong> (Paket Adı: <code>com.futv.pro</code>), televizyon yayın akışlarını ve kişisel medya içeriklerini en yüksek verimlilikle oynatmak üzere optimize edilmiş modern bir Android uygulamasıdır. D-Pad yön tuşlarıyla zahmetsiz gezinme imkanı sunar, donanım ivmesini aktif olarak kullanarak cihaz bataryasını ve performansını korur.
+          <strong>FuTv TV</strong> (Paket Adı: <code>com.futv.pro</code>), medya oynatma deneyimini sade, hızlı ve uzaktan kumanda dostu bir arayüzle bir araya getiren bir Android uygulamasıdır. Bu portal; uygulamanın temel özellikleri, kurulum adımları, uyumluluk bilgileri ve kullanıcı destek kanalları hakkında resmi bilgilendirme sağlamak amacıyla hazırlanmıştır.
+        </p>
+        <p>
+          Gizlilik uygulamaları, veri işleme esasları ve reklam doğrulama kayıtları hakkında detaylı bilgiye alt bölümdeki bağlantılar üzerinden ulaşabilir; her türlü soru ve geri bildirim için doğrudan e-posta yoluyla iletişime geçebilirsiniz.
         </p>
       </div>
     </main>
@@ -562,8 +662,9 @@
     <footer id="destek">
       <div class="footer-links">
         <a href="mailto:ugur2941@gmail.com">Destek E-posta: ugur2941@gmail.com</a>
-        <a href="https://ugur2941.github.io/gizlilik/index.html" target="_blank">Gizlilik Sözleşmesi</a>
-        <a href="https://ugur2941.github.io/app-ads.txt" target="_blank">Reklam Doğrulama (app-ads.txt)</a>
+        <a href="https://ugur2941.github.io/gizlilik/index.html" target="_blank" rel="noopener noreferrer">Gizlilik Sözleşmesi</a>
+        <a href="https://ugur2941.github.io/ads.txt" target="_blank" rel="noopener noreferrer">Web Reklam Doğrulama (ads.txt)</a>
+        <a href="https://ugur2941.github.io/app-ads.txt" target="_blank" rel="noopener noreferrer">Uygulama Reklam Doğrulama (app-ads.txt)</a>
       </div>
       <p class="copyright">&copy; 2026 FuTv TV. Tüm Hakları Saklıdır. Resmi Destek ve Bilgi Portalı.</p>
     </footer>
